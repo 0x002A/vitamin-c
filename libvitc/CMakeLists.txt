@@ -27,6 +27,9 @@ endif()
 
 PROJECT("${TARGET}_test" CXX)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 file(GLOB_RECURSE TEST_SOURCES RELATIVE "${CMAKE_SOURCE_DIR}/lib${TARGET}" "tests/*.cpp" "tests/*.h")
                                                                 
 add_executable("${TARGET}_test" ${TEST_SOURCES})
