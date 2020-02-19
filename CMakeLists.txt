@@ -9,6 +9,8 @@ set(LIBNAME "vitc")
 
 project(${TARGET} C)
 
+enable_testing()
+
 add_subdirectory("lib${LIBNAME}")
 
 file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*.c" "src/*.h")

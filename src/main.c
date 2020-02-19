@@ -1,6 +1,6 @@
 #include "banner.h"
 
-#include <test.h>
+#include <vitc/test.h>
 
 int main(int argc, char* argv[]) {  	
   printStartupBanner();
