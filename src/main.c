@@ -72,7 +72,7 @@ parseArguments(int argc, char* argv[])
         vitc->generateHTML = 1;
         break;
       case '?':
-        fprintf( stderr, "Unrecognized option!\n" );
+        fprintf(stderr, "Unrecognized option!\n" );
         break;
     }
   }
@@ -82,6 +82,8 @@ parseArguments(int argc, char* argv[])
     fprintf(stderr, "Not all required arguments have been set. Aborting!\n");
     exit(1);
   }
+
+  vitc_set_defaults(vitc);
 
   vitc_free(&vitc);
 }
@@ -104,7 +106,7 @@ printHelp()
   printf("\n");
   printf("Optional arguments:\n\n");
 
-  printf(paramFormat, "-a", "algorithm to be used (BK|VF2|subVF2), default: BK");
+  printf(paramFormat, "-a", "algorithm to be used (BK|VF2|subVF2), default: subVF2");
   printf(paramFormat, "-m", "multiple alignment method (GREEDY|file), default: GREEDY");
   printf(paramFormat, "-t", "custom lable scoring table");
   printf(paramFormat, "-l", "save all resulting graphs");

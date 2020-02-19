@@ -17,3 +17,4 @@ typedef struct
 
 vitc_config *vitc_init(void);
 void vitc_free(vitc_config **handle);
+void vitc_set_defaults(vitc_config *handle);
