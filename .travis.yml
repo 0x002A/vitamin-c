@@ -1,0 +1,9 @@
+language: c
+os: linux
+compiler: gcc
+
+script: ./build.sh
+
+notifications:
+  email:
+    - kevin@0x002A.com
