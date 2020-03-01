@@ -1,6 +1,6 @@
 #pragma once
 
-typedef struct
+typedef struct _vitc_config
 {
   const char    *inputFiles;
   const char    *alignmentGraphs;

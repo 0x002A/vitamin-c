@@ -3,8 +3,8 @@
 
 #include <config.h>
 
-vitc_config
-*vitc_init(void)
+vitc_config *
+vitc_init(void)
 {
     vitc_config *cfg = (vitc_config*)malloc(sizeof(vitc_config));
 
@@ -51,6 +51,5 @@ void vitc_set_defaults(vitc_config *handle)
     if (!handle->alignmentMethod)
     {
         handle->algorithm = "GREEDY";
-    } 
-}
+    }
 }

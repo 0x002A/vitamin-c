@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #include <vitc/config.h>
+#include <vitc/input.h>
 
 void parseArguments(int argc, char* argv[]);
 void printHelp();
@@ -84,6 +85,8 @@ parseArguments(int argc, char* argv[])
   }
 
   vitc_set_defaults(vitc);
+
+  vitc_process_user_input(vitc);
 
   vitc_free(&vitc);
 }
